@@ -1,0 +1,9 @@
+body {
+    color:black;
+    background-color:white;
+    background-image:url(images/fond.png);
+    background-size: 1920px 1080px;
+    background-position: center;
+    margin:5px;
+    
+    }
