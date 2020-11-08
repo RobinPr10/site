@@ -1,13 +1,14 @@
 body {
-   
-    background:radial-gradient(circle, rgba(166,0,255,0) 0%, rgba(2,0,36,0.3) 100%), url(../images/f1.jpg) center no-repeat;
-    background-size: cover;
-    min-height: 100vh;
     
-
-
+        background: url('../images/renault.jpg') center no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        color: white
+        
     
-    }
+}
+
+}
 h1{
     color: yellow;
     top: 21px;
