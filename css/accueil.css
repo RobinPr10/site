@@ -1,7 +1,10 @@
 body {
    
-    background-image:url(images/f1.jpg);
-    background-size: 100%;
+    background:radial-gradient(circle, rgba(166,0,255,0) 0%, rgba(2,0,36,0.3) 100%), url(../images/f1.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+
     
     }
 h1{
@@ -22,6 +25,8 @@ nav{
     background-color: gray;
     position: sticky;
     top: 0px;
+    transition: .3s;
+    z-index: 20;
 }
 
 nav ul{
@@ -30,8 +35,9 @@ nav ul{
 
 nav li{
     float: left;
-    width: 25%;/*100% divisé par le nombre d'éléments de menu*/
+    width: 14.286%;/*100% divisé par le nombre d'éléments de menu*/
     text-align: center;/*Centre le texte dans les éléments de menu*/
+    transition: .3s;
 }
 
 /*Evite que le menu n'ait une hauteur nulle*/
@@ -47,6 +53,7 @@ nav a{
     color: black;
     border-bottom: 2px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
     padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+    transition: .3s;
 }
 
 nav a:hover{
@@ -57,4 +64,51 @@ nav a:hover{
 .conteneur{
   margin: 0px 20px;
   height: 1500px;
+}
+
+p{
+    color: azure;
+    text-align: center;
+    
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+}
+
+#dark_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1b1b1b;
+    z-index: 10;
+}
+
+/* Animation css de transition */
+.fadeIn {
+    animation: fadeIn linear .3s forwards;
+}
+
+.fadeOut {
+    animation: fadeOut linear .3s forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.no_opacity {
+    opacity: 0;
 }

@@ -5,19 +5,61 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Accueil</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='accueil.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/accueil.css'>
     <script src='main.js'></script>
+
 </head>
-<h1>Accueil</h1>
-<body background src="images/f1.jpg"> 
+<body> 
   <nav>
        <ul>
            <li><a href="LaF1.html">La F1</a></li>
            <li><a href="CV.html">Mon CV</a></li>
-           <li><a href="#"></a></li>
-
+           <li><a href="RENAULT.html">Renault</a></li>
+           <li><a href="cvanglais.html">My Cv</a></li>
+           <li><a href="RENAULT.html">Renault</a></li>
+           <li><a href="RENAULT.html">Renault</a></li>
+           <li><a href="RENAULT.html">Renault</a></li>
+               <!--La partie menant vers les liens des differentes pages-->
        </ul>
   </nav>    
+      <p>Bienvenue , sur ce site nous allons decouvrire le monde de la F1 et de l'équipe Renault</p>
       
+      <img src="images/Renault-F1-Team.png" onmouseenter="darken()" onmouseout="no_darken()" id="F1">
+      <div id="dark_overlay" class="no_opacity"></div>
+      <img src="images/Renault-F1-Team-reverse.png" id="F1-reverse" class="no_opacity" style="z-index: 11;">
+
+
+      <script>
+          /* Au passage de la souris sur l'image centrale de la page, il y'a activation d'un script qui rajoute des animations css au moyen d'une class */
+          var F1 = document.getElementById("F1");
+          var F1_reverse = document.getElementById("F1-reverse");
+          var overlay = document.getElementById("dark_overlay");
+
+          function darken() {
+            F1_reverse.classList.add("fadeIn");
+            overlay.classList.add("fadeIn");
+            F1.classList.add("fadeOut");
+
+            F1_reverse.classList.remove("fadeOut");
+            overlay.classList.remove("fadeOut");
+            F1.classList.remove("fadeIn");
+
+            F1_reverse.classList.remove("no_opacity");
+            overlay.classList.remove("no_opacity");
+
+            var audio = new Audio('sound-effect-formula-1.mp3');
+            audio.play();
+          }
+
+          function no_darken() {
+            F1_reverse.classList.add("fadeOut");
+            overlay.classList.add("fadeOut");
+            F1.classList.add("fadeIn");
+
+            F1_reverse.classList.remove("fadeIn");
+            overlay.classList.remove("fadeIn");
+            F1.classList.remove("fadeOut");
+          }
+      </script>
 </body>
 </html>
