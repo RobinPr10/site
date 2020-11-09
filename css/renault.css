@@ -114,3 +114,10 @@ img {
 .no_opacity {
     opacity: 0;
 }
+
+p {
+    color: orange;
+    text-align: left;
+    text-justify: auto ;
+    font-size: 25px;
+}
